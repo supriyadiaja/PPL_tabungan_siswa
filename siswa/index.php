@@ -4,6 +4,8 @@ include 'koneksi.php';
 
 ?>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 <style>
   table, p {
     font-family: 'poppins', sans-serif;
@@ -19,7 +21,7 @@ include 'koneksi.php';
 
 <p>
   <strong>Data Siswa</strong>
-  <a class="btn btn-primary pull-right" style="margin-bottom: 2%" href="form_siswa.html">Tambah</a>
+  <a class="btn btn-success pull-right" style="margin-bottom: 2%" href="form_siswa.html">Tambah <i class="bi bi-person-plus-fill"></i></a>
 </p>
 
 <table class="table table-striped">
@@ -41,21 +43,21 @@ include 'koneksi.php';
                   <td>
                     <?php echo $no++; ?>
                   </td>
-                  <td>
+                  <td width="20%">
                     <?php echo $row['nama']; ?>
                   </td>
-                  <td>
+                  <td >
                     <?php echo $row['jenis_kelamin']; ?>
                   </td>
-                  <td>
+                  <td width="25%">
                     <?php echo $row['alamat']; ?>
                   </td>
-                  <td>
-                    <?php echo $row['telepon']; ?>
+                  <td width="15%">
+                    0<?php echo $row['telepon']; ?>
                   </td>
-                  <td>
-                  <a class="btn btn-warning" href="edit_siswa-<?php echo $row['id_siswa']; ?>.html">Edit</a>
-                  <a class="btn btn-danger" href="hapus_siswa-<?php echo $row['id_siswa']; ?>.html">Hapus</a>
+                  <td width="15%">
+                  <a class="btn btn-warning" href="edit_siswa-<?php echo $row['id_siswa']; ?>.html"><i class="bi bi-pencil-square"></i></a>
+                  <a class="btn btn-danger" href="hapus_siswa-<?php echo $row['id_siswa']; ?>.html" onclick="return confirm('Yakin data siswa akan di hapus?')"><i class="bi bi-trash3"></i></a>
                 </td>
               </tr>
             <?php

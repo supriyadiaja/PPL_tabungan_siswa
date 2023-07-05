@@ -74,7 +74,7 @@ include 'koneksi.php';
 						<?php echo format_rupiah($row['jumlah_setoran'] - $row['jumlah_penarikan']); ?>
 					</td>
 					<td>
-						<a href="detail-<?php echo $row['id_siswa'] ; ?>.html" class="btn btn-success btn-xs">Detail</a>
+						<a href="detail-<?php echo $row['id_siswa'] ; ?>.html" class="btn btn-primary btn-xs">Detail</a>
 					</td>
 				</tr>
 				<?php
